@@ -8,7 +8,7 @@ import {
 } from '@/lib/actions/video';
 import { useRouter } from 'next/navigation';
 import { MAX_THUMBNAIL_SIZE, MAX_VIDEO_SIZE } from '@/constants';
-import { useFileInput } from '@/app/hooks/useFileInput';
+import { useFileInput } from '@/lib/hooks/useFileInput';
 import FormField from '@/component/FormField';
 import FileInput from '@/component/FileInput';
 
@@ -140,7 +140,7 @@ const UploadPage = () => {
         duration: videoDuration,
       });
 
-      router.push(`/video/${videoId}`);
+      router.push(`/`);
     } catch (error) {
       console.error('Error submitting form:', error);
     } finally {

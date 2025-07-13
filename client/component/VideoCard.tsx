@@ -15,7 +15,7 @@ const VideoCard = ({
   duration,
 }: VideoCardProps) => {
   return (
-    <Link href={`/video/${id}`} className="video-card">
+    <Link href={`/video/${id}`} className="video-card border shadow">
       <Image
         src={thumbnail}
         alt="thumbnail"
