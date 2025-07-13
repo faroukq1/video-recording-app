@@ -24,11 +24,10 @@ export const useFileInput = (maxSize: number) => {
         const video = document.createElement('video');
         video.preload = 'metadata';
         video.onloadedmetadata = () => {
-          // Only set duration if it's a valid finite number
           if (isFinite(video.duration) && video.duration > 0) {
-            setDuration(Math.round(video.duration)); // Round to nearest integer
+            setDuration(Math.round(video.duration));
           } else {
-            setDuration(null); // Set to null if invalid
+            setDuration(null);
           }
           URL.revokeObjectURL(video.src);
         };
